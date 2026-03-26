@@ -1,0 +1,33 @@
+<idea-plugin>
+    <id>com.jrforge.jrforge</id>
+    <name>JRForge</name>
+    <vendor url="https://www.jrforge.com">JRForge</vendor>
+
+    <description><![CDATA[
+        JRForge - Regex testing and validation tool for Java developers.
+        Test, debug and validate regular expressions directly inside IntelliJ IDEA.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow
+                id="JRForge"
+                anchor="right"
+                secondary="false"
+                canCloseContents="false"
+                doNotActivateOnStart="true"
+                factoryClass="com.jrforge.RegexToolWindowFactory"/>
+    </extensions>
+
+    <actions>
+        <action
+                id="com.jrforge.OpenInJRForgeAction"
+                class="com.jrforge.OpenInJRForgeAction"
+                text="Test in JRForge"
+                description="Test selected regex pattern in JRForge">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+
+</idea-plugin>
