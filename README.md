@@ -93,5 +93,3 @@ A powerful Regex testing and Java error explanation plugin for IntelliJ IDEA.
 - **Build:** Gradle (Kotlin DSL)
 
 ---
-
-## Project Structure
